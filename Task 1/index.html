@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <link  rel="stylesheet" href="style.css">
+        <title>EMPLOYEE HOME PAGE</title>
+
+        <script>
+        function validation(){
+            var emaillength=document.myform.emailid.value;
+            var passwordlength=document.myform.password.value;
+            if(emaillength == 0 || passwordlength==0 )
+            {
+            alert("Password or Email cannot be empty");
+            return false;
+            }
+            
+        }
+        </script>
+
+    </head>
+
+    <body style="background-color:violet;">
+        <strong><marquee>Welcome to Cognizant Technology Solutions</marquee></strong>
+        <img src="cognizant.png" alt="image was supposed to be here" style="margin-left:40%" style="margin-right:50%">
+        <h1 style="text-align: center;" >EMPLOYEE MANAGEMENT SYSTEM</h1><br>
+        
+        <form name="myform" action="payroll.html" method="POST" align="center"  onsubmit="return validation()">
+            <label for="emailid">Email ID</label>
+            <input type="email" id="emailid" name="emailid"><br><br>
+
+            <label for="password ">Password</label>
+            <input type="password" id="password" name="password"><br><br>
+
+            <button type="button" onclick="location.href='signup.html';">SIGN UP</button>
+            <label for="signin"></label>
+            <input type="submit" id="signin" name="signin" value="SIGN IN"">
+
+            <button type="reset">RESET</button>
+        </form>
+    </body>
+</html>
