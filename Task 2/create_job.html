@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CREATE JOBS</title>
+    <!--    <link rel="stylesheet" href="design.css">   -->
+
+
+    <style>
+     h1{
+    background-color: green;
+}
+.a{
+    background-color: violet;
+}
+body{
+    background-color: pink;
+}
+    </style>
+
+
+        
+        <script>
+            function checked(){
+                var data=document.getElementById("opd");
+                
+                var today=new Date();
+                /*var date=today.getDate();
+                var month=today.getMonth()+1;
+                var year=today.getFullYear(); */
+              //  alert(today);
+              var obj=new Date(data.value);
+             // alert(today);
+              //alert(data.value);
+              //alert(obj);
+              
+              
+                if(obj<today){
+                    alert(data.value+" is NOT TODAY' DATE ");
+                    
+                  }
+                }
+
+        </script>
+    </head>
+
+    <body>
+        <h1 align="center">JOBS</h1>
+        <div class="a">
+        <form>
+            <label for="title"> Job Title:<sup style="color:red">*</sup></label>
+            <select id="title" name="title" required>
+                <option>Product manager</option>
+                <option>Project manager</option>
+                <option>HR manager</option>
+            </select><br><br>
+
+            <label for="department">Department:<sup style="color:red">*</sup></label>
+            <select id="department" name="department" required>
+                 <option>Cloud computing</option>
+                <option>IOT</option>
+                <option>Machine Learning</option>
+            </select><br><br>
+
+            <label for="country">Country:<sup style="color:red">*</sup></label>
+            <select id="country" name="country" required>
+                <option>India</option>
+                 <option>USA</option>
+                <option>CHINA</option>
+            </select><br><br>
+
+            <label for="opd">Opening date:<sup style="color:red">*</sup></label>
+            <input type="date" id="opd" required><br><br>
+
+            <button type="submit" onclick="checked()">SUBMIT</button>
+
+        </form>
+        </div>
+    </body>
+</html>

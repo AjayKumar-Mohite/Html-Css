@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <title>JOB Applicatiopn</title>
+    <!--    <link rel="stylesheet" href="design.css">   -->
+    <style>
+        h1{
+       background-color: green;
+   }
+   .a{
+       background-color: violet;
+   }
+   body{
+       background-color: pink;
+   }
+       </style>
+
+    </head>
+
+    <body>
+
+       
+
+
+        <div id="B">
+        <h1 align="center">JOB APPLICATION</h1>
+        <form method="get">
+      
+            <label for="name">First name<sup style="color:red">*</sup></label>
+            <input type="text" id="name" name="fname" required><br><br>
+
+            <label for="lame">Last name<sup style="color:red">*</sup></label>
+            <input type="text" id="lame" name="lname" required><br><br>
+
+            <label for="email">Email<sup style="color:red">*</sup></label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="pname">Phone no.<sup style="color:red">*</sup></label>
+            <input type="text" id="pname" name="pname" required><br><br>
+
+            <label for="address ">Address<sup style="color:red">*</sup></label>
+            <input type="text" id="address" name="address" required><br><br>
+
+            <label for="zip">ZIP Code<sup style="color:red">*</sup></label>
+            <input type="number" id="zip" name="zip" required><br><br>
+
+            <label for="country">Country<sup style="color:red">*</sup></label>
+            <select id="country" name="country" required>
+                <option>India</option>
+                <option>USA</option>
+                <option>CHINA</option>
+            </select><br><br>
+
+            <label for="edu">Education Level<sup style="color:red">*</sup></label>
+            <select id="edu" name="edu" required>
+                <option>Diploma</option>
+                <option>B.tech</option>
+                <option>M.tech</option>
+                <option>Phd</option>
+            </select><br><br>
+
+            <label for="edut">Education Type<sup style="color:red">*</sup></label>
+            <select id="edut" name="edut" required>
+                <option>Full Time</option>
+                <option>Part Time</option>
+                <option>Distance Learning</option>
+            </select><br><br>
+
+
+        </div>
+
+            <label for="checkBox">Are you currently Employed</label>
+            <input type="checkBox" id="checkBox" class="checkBox" name="checkBox" onclick="showdiv()">
+            <label>Yes</label>
+            <br><br>
+
+            <div id="Employeedetails" style="display:none;">
+                <label for="ce">Current Employer</label>
+                <input type="text" id="ce" name="ce"><br><br>
+        
+                <label for="yoe">Years of Experience</label>
+                <input type="number" id="yoe" name="yoe"><br><br>
+            </div>
+
+           
+            <label for="resume">RESUME<sup style="color:red">*</sup></label>
+            <input id="resume" type="file" name="resume" required>
+
+
+           <br><br> <button type="submit" onclick="myfun()">SUBMIT</button>
+            
+        </form>
+
+
+
+
+
+        <script>
+
+               
+            function showdiv()
+            {
+
+                var checkBox = document.getElementById("checkBox");
+                var element=document.getElementById("Employeedetails");
+
+                if(checkBox.checked == true){
+                    element.style.display= "block";
+                }
+                else{
+                    element.style.display= "none";
+                }
+
+
+            }
+
+
+
+            function myfun(){
+                var name=document.getElementById("name").value;
+                var lame=document.getElementById("lame").value;
+                var pno=document.getElementById("pname").value.length;
+                if(pno!=10){
+                    alert("Please enter Correct Phone no.");
+                    return false;
+                }
+
+                if(isNaN(name)){
+
+                }else{
+                    alert("First name cannnot be a number");
+                }
+                if(isNaN(lame)){
+
+                }else{
+                    alert("Last name cannot be a Number");
+                }
+            
+                
+            }   
+            
+        </script>
+
+<br><br><br><br><br><br><br>
+<marquee><h5>Copyright@cognizant.com</h6></marquee>
+    </body>
+</html>
